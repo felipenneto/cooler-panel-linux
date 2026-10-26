@@ -1,0 +1,2 @@
+# Access for the active local session, only for this USB panel.
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="aa88", ATTRS{idProduct}=="8666", TAG+="uaccess"

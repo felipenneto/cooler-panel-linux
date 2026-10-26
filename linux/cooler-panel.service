@@ -1,0 +1,16 @@
+[Unit]
+Description=Cooler Panel USB display (Ryzen + Radeon)
+StartLimitIntervalSec=30
+StartLimitBurst=3
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 "%h/.local/share/cooler-panel/cooler_panel.py" --run
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=10
+NoNewPrivileges=yes
+UMask=0077
+
+[Install]
+WantedBy=default.target
